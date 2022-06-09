@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Enter your description here" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="Css/Estilos.css">
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <title>Title</title>
+</head>
+
+<body>
+
+  <!-- Nav tabs -->
+
+  
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div class="tab-pane fade show active" id="tab1Id" role="tabpanel"></div>
+    <div class="tab-pane fade" id="tab2Id" role="tabpanel"></div>
+    <div class="tab-pane fade" id="tab3Id" role="tabpanel"></div>
+    <div class="tab-pane fade" id="tab4Id" role="tabpanel"></div>
+    <div class="tab-pane fade" id="tab5Id" role="tabpanel"></div>
+  </div>
+  
+  <script>
+    $('#navId a').click(e => {
+      e.preventDefault();
+      $(this).tab('show');
+    });
+  </script>
+  <!--Navegacion-->
+  <!-- NAVIGATION -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="navbar">
+    <a class="navbar-brand" href="#">My Website</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="#navbarNavAltMarkup">
+      <div class="navbar-nav ml-auto">
+        <a class="nav-item nav-link" href="#header">Home</a>
+        <a class="nav-item nav-link" href="#comentarios">About</a>
+        <a class="nav-item nav-link" href="">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!--Section-->
+  <section id="header">
+
+    <div class="container mt-5">
+
+      <div class="row ">
+        <!--Columna de 6 con imagen Iqz-->
+        <div class="col-md-6 col-sm-6 mt-5">
+          <div class="header-content-left ">
+            <img src="Img/image1.jpg" id="imgs" style="width: 60%;" alt="">
+          </div>
+        </div>
+        <!--Columna de 6 con imagen Derecha-->
+        <div class="col-md-6 col-sm-6 mt-5">
+          <div class="header-content-rigth">
+            <h1>Sit asperiores voluptas atque autem?</h1>
+            <p class="mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis alias consequuntur
+              corrupti iusto. Doloremque non error cumque laudantium ipsa atque, nobis maxime, facilis dolorem aliquid
+              perferendis quae minima, illo modi.</p>
+            <a name="" id="" class="btn  btn-outline-primary btn-lg btn-block mt-5 header-btn" href="#"
+              role="button">Leer mas</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="comentarios">
+    <div class="container">
+      <p class="h2 mb-2">
+
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, accusamus non! Rem, quasi saepe! Dignissimos facere ipsam quasi? Quod saepe dicta sunt laboriosam delectus corrupti soluta quam ipsa molestiae laborum.
+      </p>
+      <p class="h4">--Master Moises  </p>
+      <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+
+  </section>
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+<script>
+  window.sr = ScrollReveal();
+
+
+  sr.reveal("#navbar",{
+
+    duration: 3000,
+    origin : 'bottom' 
+   
+
+  });
+
+  sr.reveal(".header-content-left",{
+
+    duration :2000, //Mili Secondarios 
+    origin : 'left', // Direccion con las propiedades de CSS top, bottom , left , rigth 
+    distance :'200px',
+    delay : 4000
+
+  })
+
+</script>
