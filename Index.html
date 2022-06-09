@@ -17,43 +17,33 @@
 
 <body>
 
-  <!-- Nav tabs -->
 
-  
-  <!-- Tab panes -->
-  <div class="tab-content">
-    <div class="tab-pane fade show active" id="tab1Id" role="tabpanel"></div>
-    <div class="tab-pane fade" id="tab2Id" role="tabpanel"></div>
-    <div class="tab-pane fade" id="tab3Id" role="tabpanel"></div>
-    <div class="tab-pane fade" id="tab4Id" role="tabpanel"></div>
-    <div class="tab-pane fade" id="tab5Id" role="tabpanel"></div>
-  </div>
-  
-  <script>
-    $('#navId a').click(e => {
-      e.preventDefault();
-      $(this).tab('show');
-    });
-  </script>
-  <!--Navegacion-->
-  <!-- NAVIGATION -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="navbar">
+
+
+
+
+
+  <!--Inicio Navegacion -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <a class="navbar-brand" href="#">My Website</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
       aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="#navbarNavAltMarkup">
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ml-auto">
         <a class="nav-item nav-link" href="#header">Home</a>
         <a class="nav-item nav-link" href="#comentarios">About</a>
-        <a class="nav-item nav-link" href="">Contact</a>
+        <a class="nav-item nav-link" href="#contact">Contact</a>
       </div>
     </div>
   </nav>
 
+  <!--Fin Navegacion-->
 
-  <!--Section-->
+
+
+  <!--Inicio seccion -->
   <section id="header">
 
     <div class="container mt-5">
@@ -81,42 +71,51 @@
     </div>
 
   </section>
+  <!--fin seccion -->
 
+  <!--Inicio seccion 2-->
   <section id="comentarios">
     <div class="container">
       <p class="h2 mb-2">
 
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, accusamus non! Rem, quasi saepe! Dignissimos facere ipsam quasi? Quod saepe dicta sunt laboriosam delectus corrupti soluta quam ipsa molestiae laborum.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, accusamus non! Rem, quasi saepe! Dignissimos
+        facere ipsam quasi? Quod saepe dicta sunt laboriosam delectus corrupti soluta quam ipsa molestiae laborum.
       </p>
-      <p class="h4">--Master Moises  </p>
+      <p class="h4">--Master Moises </p>
       <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
+     <!-- Button to Open the Modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+  Open modal
 </button>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- The Modal -->
+<div class="modal" id="myModal">
   <div class="modal-dialog">
     <div class="modal-content">
+
+      <!-- Modal Header -->
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
+
+      <!-- Modal body -->
       <div class="modal-body">
-        ...
+        Modal body..
       </div>
+
+      <!-- Modal footer -->
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
       </div>
+
     </div>
   </div>
 </div>
-    </div>
 
   </section>
 
-
+  <!--Fin seccion 2-->
 
 
 
@@ -127,25 +126,37 @@
 
 </html>
 
+
 <script>
+  //Libreria Scroll Reveal 
+  //Instalacion con CDN 
+  //Crear Instancia 
+  //Parametro 1 la etiqueta a afectar
+  //Parametro 2 un objeto 
+  //duration: 3000, En milisegundos 
+  //origin: // Direccion con las propiedades de CSS top, bottom , left , rigth 
+  //distance: '200px', Distancia del origen
+  //delay: 2000  Efecto
   window.sr = ScrollReveal();
 
 
-  sr.reveal("#navbar",{
+  sr.reveal("#navbar", {
 
     duration: 3000,
-    origin : 'bottom' 
-   
+    origin: 'bottom'
+
 
   });
 
-  sr.reveal(".header-content-left",{
+  sr.reveal(".header-content-left", {
 
-    duration :2000, //Mili Secondarios 
-    origin : 'left', // Direccion con las propiedades de CSS top, bottom , left , rigth 
-    distance :'200px',
-    delay : 4000
+    duration: 2000,
+    origin: 'left', 
+    distance: '200px',
+    delay: 2000
 
   })
-
+  $(document).ready(function() {
+    $("#MyModal").modal();
+  });
 </script>
